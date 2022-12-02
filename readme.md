@@ -1,3 +1,3 @@
-# Kickstarter projekt med PHP
+# 3. semester eksamensprojekt af Sofie W og Mark
 
-Klon dette projekt og kom hurtigt i gang med dit næste projekt.
+Dette er Kragebjerggårds webside.
