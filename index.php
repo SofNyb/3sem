@@ -1,10 +1,10 @@
 <?php
 require "settings/init.php";
 
-$blogs = $db->sql("SELECT * FROM blogs");
+$produkter = $db->sql("SELECT * FROM produkter");
 
-foreach ($blogs as $blog){
-    echo $blog->blogName . "<br>";
+foreach ($produkter as $produkt){
+    echo $produkt->prodNavn . "<br>";
 }
 ?>
 
