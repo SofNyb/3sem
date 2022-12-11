@@ -4,11 +4,15 @@
 
 body {
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
+	font-family: dapifer, serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 ul, ol {
@@ -30,4 +34,19 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+
+.navbar-brand {
+	max-width: 75px;
+}
+
+.nav-item {
+	font-family: dapifer, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.2rem;
+}
+
+.fa-shopping-basket {
+	font-size: 2rem;
 }
