@@ -63,6 +63,13 @@ a {
 		object-fit: cover;
 		//filter: blur(4px);
 	}
+	.hero {
+		 position: absolute;
+		 z-index: -999;
+	 }
+	.menuer {
+		margin-top: 100px;
+	}
 }
 
 .indexProdImg {
@@ -71,4 +78,5 @@ a {
 	object-fit: cover;
 	border-radius: 5px;
 }
+
 

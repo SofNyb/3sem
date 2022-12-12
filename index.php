@@ -29,16 +29,19 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
         <div class="col-12">
-            <img class="img-fluid" src="images/indexHero.jpg" alt="Ko">
+            <img class="hero" src="images/indexHero.jpg" alt="Ko">
         </div>
-        <div class="col-6 menuer">
+    </div>
+</div>
+<div class="container menuer">
+    <div class="row">
+        <div class="col-6">
             <img class="indexProdImg mb-2" src="images/indexKo.jpg" alt="Ko">
             <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
         </div>
-        <div class="col-6 menuer">
+        <div class="col-6">
             <img class="indexProdImg mb-2" src="images/indexGroentsager.jpg" alt="Grøntsager">
             <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Grøntsager</a>
         </div>
