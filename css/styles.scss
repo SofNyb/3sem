@@ -6,6 +6,9 @@ body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	overflow-x: hidden;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,6 +59,13 @@ a {
 	font-size: 2rem;
 }
 
+header {
+	min-height: 50px;
+}
+
+footer {
+	min-height: 200px;
+}
 
 @media screen and (min-width: 992px) {
 	.hero {
