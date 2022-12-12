@@ -7,6 +7,7 @@ $custom-colors: (
         "customSecondary": #f5c856,
         "customAccent1": #b7f591,
         "customAccent2": #f2f577,
+        "footer": #464646,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
