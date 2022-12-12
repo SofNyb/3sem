@@ -29,43 +29,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
-<?php
-foreach ($produkter as $produkt){
-    ?>
 
-    <div class="row border-bottom p-2">
-
-        <div class="col-12 col-md-4">
-            <?php
-            echo $produkt->prodNavn;
-            ?>
-        </div>
-
-        <div class="col-12 col-md-4">
-            <?php
-            echo $produkt->prodType;
-            ?>
-        </div>
-
-        <div class="col-12 col-md-2">
-            <?php
-            echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr.";
-            ?>
-        </div>
-
-        <div class="col-12 col-md-2">
-            <?php
-            echo $produkt->prodMaengde;
-            ?>
-        </div>
-
-    </div>
-
-
-
-    <?php
-}
-?>
 
 <?php include "includes/footer.php"; ?>
 
