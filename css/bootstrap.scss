@@ -3,12 +3,13 @@
 @import "../node_modules/bootstrap/scss/mixins";
 
 $custom-colors: (
-        "customPrimary": #90b765,
-        "customSecondary": #f3c656,
-        "customAccent1": #b6f391,
-        "customAccent2": #f0f377,
+        "customPrimary": #91b865,
+        "customSecondary": #f5c856,
+        "customAccent1": #b7f591,
+        "customAccent2": #f2f577,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
