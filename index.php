@@ -29,25 +29,37 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
-<div class="container-fluid">
-        <div class="col-12">
-            <img class="hero" src="images/indexHero.jpg" alt="Ko">
-        </div>
-    </div>
-</div>
+<img class="hero" src="images/indexHero.jpg" alt="Ko">
+
 <div class="container menuer">
     <div class="row">
         <div class="col-6">
-            <img class="indexProdImg mb-2" src="images/indexKo.jpg" alt="Ko">
-            <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
+            <img class="indexProdImg" src="images/indexKo.jpg" alt="Ko">
+            <a type="button" class="w-100 btn btn-customSecondary text-light p-3" href="#"><h3>Mejeriprodukter</h3></a>
         </div>
         <div class="col-6">
-            <img class="indexProdImg mb-2" src="images/indexGroentsager.jpg" alt="Grøntsager">
-            <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Grøntsager</a>
+            <img class="indexProdImg" src="images/indexGroentsager.jpg" alt="Grøntsager">
+            <a type="button" class="w-100 btn btn-customSecondary text-light p-3" href="#"><h3>Grøntsager</h3></a>
         </div>
     </div>
 </div>
 
+<div class="container goal my-4">
+    <div class="card-body">
+        <div class="card-header text-center pb-1">
+            <h1>Vores Mål</h1>
+        </div>
+        <div class="card-text">
+            <p>
+                Vores mål er at komme så tæt på 100% bæredygtighed og brug af grønne løsninger til alt, hvad vi foretager os.
+                Frøene, som vi sår til vores grøntsager, kommer fra tidligere høste.
+                Grøntsagerne bliver både brugt som foder til vores dyr, og solgt i vores gårdbutik.
+                Køerne bliver malket, når det er tid til det, og så producerer de også naturlig gødning til vores marker og grøntsager.
+                Hele vejen rundt forsøger vi at løse tingene selv.
+            </p>
+        </div>
+    </div>
+</div>
 
 <?php include "includes/footer.php"; ?>
 
