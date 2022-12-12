@@ -26,6 +26,8 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <body>
 
+<?php include "includes/header.php"; ?>
+
 <?php
 foreach ($produkter as $produkt){
     ?>
@@ -63,6 +65,8 @@ foreach ($produkter as $produkt){
     <?php
 }
 ?>
+
+<?php include "includes/footer.php"; ?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
