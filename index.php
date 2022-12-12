@@ -29,6 +29,21 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <img class="img-fluid" src="images/indexHero.jpg" alt="Ko">
+        </div>
+        <div class="col-6 menuer">
+            <img class="indexProdImg mb-2" src="images/indexKo.jpg" alt="Ko">
+            <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
+        </div>
+        <div class="col-6 menuer">
+            <img class="indexProdImg mb-2" src="images/indexGroentsager.jpg" alt="Grøntsager">
+            <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Grøntsager</a>
+        </div>
+    </div>
+</div>
 
 
 <?php include "includes/footer.php"; ?>
