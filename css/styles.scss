@@ -71,6 +71,8 @@ footer {
 	.hero {
 		position: absolute;
 		z-index: -999;
+		height: 100%;
+		object-fit: cover;
 	 }
 	.menuer {
 		margin-top: 100px;
