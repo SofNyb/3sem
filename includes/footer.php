@@ -19,12 +19,12 @@
             <div class="row mt-3 justify-content-center">
                 <div class="col-auto">
                     <a href="#" target="_blank">
-                        <i class="fa-brands fa-facebook-f fa-3x"></i>
+                        <i class="fa-brands text-white fa-facebook-f fa-3x"></i>
                     </a>
                 </div>
                 <div class="col-auto">
                     <a href="#" target="_blank">
-                        <i class="fa-brands fa-instagram fa-3x"></i>
+                        <i class="fa-brands text-white fa-instagram fa-3x"></i>
                     </a>
                 </div>
             </div>
