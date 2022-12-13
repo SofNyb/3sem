@@ -44,7 +44,7 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodBeskrivelse, pr
                                 <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
                             </div>
                             <div class="col-4 text-end">
-                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp fa-solid fa-basket-shopping"></i></a>
+                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
                             </div>
                         </div>
                     </div>
