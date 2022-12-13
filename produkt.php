@@ -1,17 +1,9 @@
 <?php
 require "settings/init.php";
 
-if(!empty ($_GET ["type"])) {
-    if ($_GET["type"] == "slet") {
-        $id = $_GET["id"];
-        $db->sql("DELETE FROM bogreolen WHERE prodID = :prodId", [":prodId"=>$id], false);
-
-        header("Location: produkt.php");
-    }
-}
-
-$produkter = $db->sql("SELECT  FROM produkter WHERE prodId='1'");
+$produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodBeskrivelse, prodPris, prodMaengde, prodDato FROM produkter");
 ?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -32,3 +24,39 @@ $produkter = $db->sql("SELECT  FROM produkter WHERE prodId='1'");
     <script src="https://cdn.tiny.cloud/1/xssvlu2s8qf9xc5tsggguxuegtb0t783k713q8tpsbc1x6sh/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://kit.fontawesome.com/bc87d7ac19.js" crossorigin="anonymous"></script>
 </head>
+
+<body>
+
+<?php include "includes/header.php"; ?>
+
+<div class="container">
+    <div class="row py-4 g-3">
+        <?php foreach ($produkter as $produkt){ ?>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100">
+                    <img class="card-img-top" src="uploads/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
+                    <div class="card-body">
+                        <h4 class="card-title border-bottom"><?php echo $produkt->prodNavn; ?></h4>
+                        <div class="row">
+                            <h4 class="card-title border-bottom"><?php echo $produkt->prodBeskrivelse; ?></h4>
+                            <p class="card-text"><?php echo $produkt->prodMaengde; ?></p>
+                            <div class="col-8">
+                                <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
+                            </div>
+                            <p class="card-text"><?php echo $produkt->prodDato; ?></p>
+                            <div class="col-4 text-end">
+                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+<?php include "includes/footer.php"; ?>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
