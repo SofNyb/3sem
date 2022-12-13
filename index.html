@@ -56,23 +56,45 @@
 </nav>
 
 <section class="mt-5 pt-5 mt-lg-0 pt-lg-0">
-	<div>
+
+	<div class="d-none d-lg-flex h-100 w-100 position-absolute align-items-center justify-content-center">
+		<div class="container bg-dark p-5 bg-opacity-75">
+			<div class="row">
+				<div class="col-6">
+					<img class="indexProdImg--desktop" src="images/indexKo.jpg">
+					<div class="mt-2">
+						<a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
+					</div>
+				</div>
+
+				<div class="col-6">
+					<img class="indexProdImg--desktop" src="images/indexGroentsager.jpg">
+					<div class="mt-2">
+						<a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Grøntsager</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="d-inline-block w-100">
 		<img class="img-fluid indexHero" src="images/indexHero.jpg">
 	</div>
+
 </section>
 
 <section class="d-block d-lg-none mt-4">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-6">
-				<img class="indexProdImg" src="images/indexKo.jpg">
+				<img class="indexProdImg--mobile" src="images/indexKo.jpg">
 				<div class="mt-2">
 					<a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
 				</div>
 			</div>
 
 			<div class="col-6">
-				<img class="indexProdImg" src="images/indexGroentsager.jpg">
+				<img class="indexProdImg--mobile" src="images/indexGroentsager.jpg">
 				<div class="mt-2">
 					<a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Grøntsager</a>
 				</div>
@@ -81,11 +103,54 @@
 	</div>
 </section>
 
-<section>
-	<div class="text-center">
-		<h1>Vores mål</h1>
+<section class="d-block d-lg-none mt-4 container-fluid mb-5">
+	<div>
+		<h1 class="text-center">Vores mål</h1>
+		<p>
+			Vores mål er at komme så tæt på 100% bæredygtighed og brug af grønne løsninger til alt, hvad vi foretager os.
+			Frøene, som vi sår til vores grøntsager, kommer fra tidligere høste.
+			Grøntsagerne bliver både brugt som foder til vores dyr, og solgt i vores gårdbutik.
+			Køerne bliver malket, når det er tid til det, og så producerer de også naturlig gødning til vores marker og grøntsager.
+			Hele vejen rundt forsøger vi at løse tingene selv.
+		</p>
 	</div>
 </section>
+
+<footer class="text-center text-lg-start bg-footer text-light pt-3">
+	<div class="container text-md-start">
+		<div class="row mt-3">
+			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+				<h6 class="fw-bold mb-4">ÅBNINGSTIDER</h6>
+				<p>Mandag - torsdag: 08.00-17.00</p>
+				<p>Fredag - søndag: 08.00-15.00</p>
+			</div>
+			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+				<h6 class="fw-bold mb-4">KONTAKT OS</h6>
+				<p><i class="fas fa-home me-3"></i>Kragebjergvej 1</p>
+				<p><i class="fas fa-home me-3 text-footer"></i>4296 Nyrup</p>
+				<p><i class="fas fa-envelope me-3"></i><a href="mailto:kragebjerg@kb.com" style="text-decoration-color: white; color: white;">kragebjerg@kb.com</a></p>
+				<p><i class="fas fa-phone me-3"></i>57 80 32 52</p>
+			</div>
+		</div>
+	</div>
+	<div class="container mb-4">
+		<div class="row mt-3 justify-content-center">
+			<div class="col-auto">
+				<a href="#" target="_blank">
+					<i class="fa-brands text-white fa-facebook-f fa-3x"></i>
+				</a>
+			</div>
+			<div class="col-auto">
+				<a href="#" target="_blank">
+					<i class="fa-brands text-white fa-instagram fa-3x"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="text-light text-center p-2">© 2022 Copyright:
+		<a class="text-light text-decoration-none" href="https://mdbootstrap.com/">Kragebjerggård</a>
+	</div>
+</footer>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
