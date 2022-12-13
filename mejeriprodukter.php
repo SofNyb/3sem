@@ -1,7 +1,7 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodBeskrivelse, prodPris, prodMaengde, prodDato, prodType FROM produkter WHERE prodType='Mejeri og køl'");
+$produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaengde, prodType FROM produkter WHERE prodType='Mejeri og køl'");
 ?>
 
 <!DOCTYPE html>
