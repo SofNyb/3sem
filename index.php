@@ -34,11 +34,11 @@ $produkter = $db->sql("SELECT * FROM produkter");
 <div class="container menuer">
     <div class="row">
         <div class="col-6">
-            <img class="indexProdImg" src="images/indexKo.jpg" alt="Ko">
+            <img class="indexProdImgAlt" src="images/indexKo.jpg" alt="Ko">
             <a type="button" class="w-100 btn btn-customSecondary text-light p-3" href="#"><h3>Mejeriprodukter</h3></a>
         </div>
         <div class="col-6">
-            <img class="indexProdImg" src="images/indexGroentsager.jpg" alt="Grøntsager">
+            <img class="indexProdImgAlt" src="images/indexGroentsager.jpg" alt="Grøntsager">
             <a type="button" class="w-100 btn btn-customSecondary text-light p-3" href="#"><h3>Grøntsager</h3></a>
         </div>
     </div>
