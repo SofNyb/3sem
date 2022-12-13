@@ -11,6 +11,6 @@
                 <a class="nav-link text-light" aria-current="page" href="omos.php"><h5>Om os</h5></a>
             </div>
         </div>
-        <a class="nav-link" aria-current="page" href="#"><i class="fa-sharp fa-solid fa-basket-shopping fa-2x"></i></a>
+        <a class="nav-link text-light" aria-current="page" href="#"><i class="fa-sharp fa-solid fa-basket-shopping fa-2x"></i></a>
     </div>
 </nav>
