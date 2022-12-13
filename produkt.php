@@ -1,7 +1,7 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodBeskrivelse, prodPris, prodMaengde, prodDato FROM produkter");
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodId=1");
 ?>
 
 <!DOCTYPE html>
@@ -32,21 +32,22 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodBeskrivelse, pr
 <div class="container">
     <div class="row py-4 g-3">
         <?php foreach ($produkter as $produkt){ ?>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-md-12">
                 <div class="card h-100">
                     <img class="card-img-top" src="uploads/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
                     <div class="card-body">
                         <h4 class="card-title border-bottom"><?php echo $produkt->prodNavn; ?></h4>
                         <div class="row">
-                            <h4 class="card-title border-bottom"><?php echo $produkt->prodBeskrivelse; ?></h4>
                             <p class="card-text"><?php echo $produkt->prodMaengde; ?></p>
-                            <div class="col-8">
+                            <div class="col-6">
                                 <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
                             </div>
-                            <p class="card-text"><?php echo $produkt->prodDato; ?></p>
-                            <div class="col-4 text-end">
+                            <div class="col-6 text-end">
                                 <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
                             </div>
+                            <h3>Varebeskrivelse</h3>
+                            <p class="card-title border-bottom"><?php echo $produkt->prodBeskrivelse; ?></p>
+                            <p class="card-text"><?php echo $produkt->prodDato; ?></p>
                         </div>
                     </div>
                 </div>
