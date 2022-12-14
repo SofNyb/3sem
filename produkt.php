@@ -1,7 +1,8 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodId=1");
+$prodId = $_GET["prodId"];
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 ?>
 
 <!DOCTYPE html>
