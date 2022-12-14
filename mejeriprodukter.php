@@ -1,7 +1,7 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaengde, prodType FROM produkter WHERE prodType='Mejeri og køl'");
+$produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris FROM produkter WHERE prodType='Mejeri og køl'");
 ?>
 
 <!DOCTYPE html>
@@ -30,10 +30,10 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaeng
 
 
 
-<div class="container">
-    <div class="row py-4 g-3">
+<div class="container my-5">
+    <div class="row mt-5 g-3">
         <?php foreach ($produkter as $produkt){ ?>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-5">
                 <div class="card h-100">
                     <img class="card-img-top" src="uploads/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
                     <div class="card-body">
