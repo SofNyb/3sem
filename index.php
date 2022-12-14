@@ -33,7 +33,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
 <?php include "includes/header.php"; ?>
 
 <section class="mt-5 pt-5 mt-lg-0 pt-lg-0">
-
     <div class="d-none d-lg-flex h-100 w-100 position-absolute align-items-center justify-content-center">
         <div class="container bg-dark p-5 bg-opacity-75">
             <div class="row">
@@ -43,7 +42,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
                         <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
                     </div>
                 </div>
-
                 <div class="col-6">
                     <img class="indexProdImg--desktop" src="images/indexGroentsager.jpg">
                     <div class="mt-2">
@@ -53,11 +51,9 @@ $produkter = $db->sql("SELECT * FROM produkter");
             </div>
         </div>
     </div>
-
     <div class="d-inline-block w-100">
         <img class="img-fluid indexHero" src="images/indexHero.jpg">
     </div>
-
 </section>
 
 <section class="d-block d-lg-none mt-4">
@@ -69,7 +65,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
                     <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
                 </div>
             </div>
-
             <div class="col-6">
                 <img class="indexProdImg--mobile" src="images/indexGroentsager.jpg">
                 <div class="mt-2">
