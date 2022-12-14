@@ -40,14 +40,16 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaeng
                         <h4 class="card-title border-bottom"><?php echo $produkt->prodNavn; ?></h4>
                         <div class="row">
                             <p class="card-text"><?php echo $produkt->prodMaengde; ?></p>
-                        <div class="col-8">
-                            <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
+                            <div class="col-12">
+                                <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
+                            </div>
+                            <div class="col-8">
+                                <p class="mt-2"><a class="text-dark text-decoration-underline" href="produkt.php?prodId=<?php echo $produkt->prodId; ?>">Læs mere</a></p>
+                            </div>
+                            <div class="col-4 text-end">
+                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
+                            </div>
                         </div>
-                        <div class="col-4 text-end">
-                            <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
-                        </div>
-                    </div>
-                    <a href="produkt.php?prodId=<?php echo $produkt->prodId; ?>">Link</a>
                     </div>
                 </div>
             </div>
