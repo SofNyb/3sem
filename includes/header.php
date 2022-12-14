@@ -4,7 +4,7 @@
             <img src="images/Logo%20v1.png">
         </a>
         <button class="navbar-toggler order-0 order-lg-1" style="border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="fas fa-bars fa-xl text-light"></span>
         </button>
         <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
