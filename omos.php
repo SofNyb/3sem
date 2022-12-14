@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="da">
-
 <head>
     <meta charset="utf-8">
 
-    <title>Om os</title>
+    <title>Kragebjerggård - Om os</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
