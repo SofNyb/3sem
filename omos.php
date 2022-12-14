@@ -28,7 +28,7 @@
 
 <?php include "includes/header.php"; ?>
 
-<section class="container-lg mt-5 pt-5">
+<section class="container-lg my-5 pt-5">
     <div class="row mt-0 mt-lg-5">
 
         <div class="col-lg-6">
