@@ -36,20 +36,18 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 <div class="container produkt mt-5">
     <div class="row py-4 g-3 mt-5">
         <?php foreach ($produkter as $produkt){ ?>
-            <div class="col-lg-4 col-xxl-6">
-                <div class="card h-100">
-                    <img class="card-img-top" src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
+            <div class="col-lg-6 col-xxl-6">
+                <div class="card">
+                    <img src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
                 </div>
             </div>
-            <div class="col-lg-8 col-xxl-6">
+            <div class="col-lg-6 col-xxl-6">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title border-bottom pb-3"><?php echo $produkt->prodNavn; ?></h4>
                         <div class="row">
-                            <p class="card-text"><?php echo $produkt->prodMaengde; ?></p>
-                            <div class="col-6 mb-5">
-                                <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
-                            </div>
+                            <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?> <?php echo $produkt->prodMaengde; ?></h5>
+                            <p class="card-text mb-4"><?php echo $produkt->prodMaengde; ?></p>
                             <h3>Varebeskrivelse</h3>
                             <p class="card-title border-bottom pb-5"><?php echo $produkt->prodBeskrivelse; ?></p>
                             <div class="col-6 pt-2">
