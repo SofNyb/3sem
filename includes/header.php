@@ -17,13 +17,13 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" href="omos.php">Om os</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Kurv</a>
+                <li class="nav-item d-lg-none d-block">
+                    <a class="nav-link text-light" href="kurv.php">Kurv</a>
                 </li>
             </ul>
         </div>
         <div class="nav-item text-light order-2 order-lg-2">
-            <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
+            <a class="nav-link" href="kurv.php"><i class="fas fa-shopping-basket"></i></a>
         </div>
     </div>
 </header>
