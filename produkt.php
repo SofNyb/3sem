@@ -5,12 +5,18 @@ $prodId = $_GET["prodId"];
 $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 ?>
 
+<?php foreach ($produkter as $produkt){ ?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="utf-8">
 
-    <title>Kragebjerggård</title>
+    <title>
+        <?php
+        echo "Kragebjerggård " . "- " . $produkt->prodNavn;
+        ?>
+    </title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -35,7 +41,6 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 
 <div class="container produkt mt-5">
     <div class="row py-4 g-3 mt-5">
-        <?php foreach ($produkter as $produkt){ ?>
             <div class="col-lg-6 col-xxl-6">
                 <div class="card">
                     <img src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
