@@ -39,13 +39,13 @@ $produkter = $db->sql("SELECT * FROM produkter");
                 <div class="col-6">
                     <img class="indexProdImg--desktop" src="images/indexKo.jpg">
                     <div class="mt-2">
-                        <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Mejeriprodukter</a>
+                        <a type="button" class="w-100 btn btn-customSecondary text-light" href="mejeriprodukter.php">Mejeriprodukter</a>
                     </div>
                 </div>
                 <div class="col-6">
                     <img class="indexProdImg--desktop" src="images/indexGroentsager.jpg">
                     <div class="mt-2">
-                        <a type="button" class="w-100 btn btn-customSecondary text-light" href="#">Grøntsager</a>
+                        <a type="button" class="w-100 btn btn-customSecondary text-light" href="grontsagsprodukter.php">Grøntsager</a>
                     </div>
                 </div>
             </div>
