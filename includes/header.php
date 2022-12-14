@@ -1,4 +1,4 @@
-<header class="navbar navbar-expand-lg bg-customPrimary">
+<header class="navbar fixed-top navbar-expand-lg bg-customPrimary">
     <div class="container">
         <a class="navbar-brand order-1 order-lg-0" href="#">
             <img src="images/Logo%20v1.png">
