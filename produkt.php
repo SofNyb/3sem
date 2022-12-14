@@ -30,12 +30,12 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 
 <?php include "includes/header.php"; ?>
 
-<div class="container mt-5">
+<div class="container produkt mt-5">
     <div class="row py-4 g-3 mt-5">
         <?php foreach ($produkter as $produkt){ ?>
             <div class="col-lg-4 col-xxl-6">
                 <div class="card h-100">
-                    <img class="card-img-top" src="uploads/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
+                    <img class="card-img-top" src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
                 </div>
             </div>
             <div class="col-lg-8 col-xxl-6">
@@ -49,10 +49,11 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
                             </div>
                             <h3>Varebeskrivelse</h3>
                             <p class="card-title border-bottom pb-5"><?php echo $produkt->prodBeskrivelse; ?></p>
-                            <div class="col-6 pt-3">
+                            <div class="col-6 pt-2">
+                                <p>Tilføjet i butik:</p>
                                 <p class="card-text"><?php echo $produkt->prodDato; ?></p>
                             </div>
-                            <div class="col-6 text-end pt-2 pe-4">
+                            <div class="col-6 text-end py-3 pe-4">
                                 <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
                             </div>
                         </div>
