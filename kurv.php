@@ -33,10 +33,27 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
+<div class="container">
 
+    <div class="kurv">
+
+        <div class="genstande">
+            <!-- Her vises produkterne-->
+
+
+        </div>
+
+    </div>
+
+</div>
 
 <?php include "includes/footer.php"; ?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module">
+
+    import Songs from "./js/produkt.js";
+
+</script>
 </body>
 </html>
