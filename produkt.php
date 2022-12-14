@@ -29,25 +29,31 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=1");
 
 <?php include "includes/header.php"; ?>
 
-<div class="container">
-    <div class="row py-4 g-3">
+<div class="container mt-5">
+    <div class="row py-4 g-3 mt-5">
         <?php foreach ($produkter as $produkt){ ?>
-            <div class="col-md-12">
+            <div class="col-lg-4 col-xxl-6">
                 <div class="card h-100">
                     <img class="card-img-top" src="uploads/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
+                </div>
+            </div>
+            <div class="col-lg-8 col-xxl-6">
+                <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title border-bottom"><?php echo $produkt->prodNavn; ?></h4>
+                        <h4 class="card-title border-bottom pb-3"><?php echo $produkt->prodNavn; ?></h4>
                         <div class="row">
                             <p class="card-text"><?php echo $produkt->prodMaengde; ?></p>
-                            <div class="col-6">
+                            <div class="col-6 mb-5">
                                 <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
                             </div>
-                            <div class="col-6 text-end">
+                            <h3>Varebeskrivelse</h3>
+                            <p class="card-title border-bottom pb-5"><?php echo $produkt->prodBeskrivelse; ?></p>
+                            <div class="col-6 pt-3">
+                                <p class="card-text"><?php echo $produkt->prodDato; ?></p>
+                            </div>
+                            <div class="col-6 text-end pt-2 pe-4">
                                 <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
                             </div>
-                            <h3>Varebeskrivelse</h3>
-                            <p class="card-title border-bottom"><?php echo $produkt->prodBeskrivelse; ?></p>
-                            <p class="card-text"><?php echo $produkt->prodDato; ?></p>
                         </div>
                     </div>
                 </div>
