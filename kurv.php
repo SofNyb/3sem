@@ -33,7 +33,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
-<div class="container">
+<section class="container mt-5 pt-5">
 
     <div class="kurv">
 
@@ -45,7 +45,36 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
     </div>
 
-</div>
+</section>
+
+<hr>
+
+<section class="container mt-5 mb-5">
+
+    <div class="row justify-content-evenly">
+
+        <div class="col-auto">
+
+            <div class="total">
+                <p class="fw-bold">
+                    I alt: <span class="text-decoration-underline fw-normal"><?php echo "DKK " . "[PRIS]";?></span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-auto">
+
+            <div class="total">
+                <a class="text-decoration-underline" href="#">
+                    Gå til betaling
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 <?php include "includes/footer.php"; ?>
 
