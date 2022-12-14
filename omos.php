@@ -37,10 +37,11 @@
             <h3>Om os</h3>
             <hr class="d-none d-lg-block">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Velkommen til vores lille hyggelige gård, placeret i midten af Sjælland, Danmark.
+                På Kragebjerg er det vores mål at være et med naturen, og producere de bedste økologiske produkter som overhoved muligt.
+                Vi er alle meget tætte, og ser hinanden som nærmest én stor familie. Til tider holder vi en kæmpe
+                høstfest, hvor vi fejrer vores succesfulde høst, kommer sammen og tilbereder et solidt måltid til alle.
+                Så kom og besøg os på et tidspunkt, vi glæder os til at se jer!
             </p>
         </div>
 
@@ -52,15 +53,21 @@
             <h3>Vores gård</h3>
             <hr class="d-none d-lg-block">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Udover vores tætte forhold og fantastiske samarbejde, så kunne det ikke lade sig gøres uden vores
+                dejlige gård. På gården gror vi alle mulige slags frilandsgrøntsager, og har en række af malkekøer,
+                som går frit rundt omkring gården.
+            </p>
+
+            <br>
+
+            <p>
+                Vi vælger på gården at bruge jordens naturlige cyklus som gødning til de næste afgrøder.
+                Vores ønske er nemlig, at landbruget skal fungere som en harmonisk levende organisme.
             </p>
         </div>
 
         <div class="col-lg-6 d-none d-lg-block">
-            <img class="aboutHero" src="images/kragebjerggaardAutentisk.png">
+            <img src="images/infografik.png">
         </div>
 
     </div>
@@ -83,13 +90,11 @@
             </iframe>
         </div>
 
-        <div class="bg-dark col-lg-3 text-light p-4">
+        <div class="d-none d-lg-block bg-dark col-lg-3 text-light p-4 align-items-start">
             <h4>Adresse</h4>
             <hr>
             <p>Kragebjerg 1</p>
             <p class="mt-3">4296 Nyrup</p>
-
-            <br>
 
             <h4 class="mt-3">Kontakt</h4>
             <hr>
