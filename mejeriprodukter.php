@@ -53,7 +53,7 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaeng
                                 <p class="mt-2"><a class="text-dark text-decoration-underline" href="produkt.php?prodId=<?php echo $produkt->prodId; ?>">Læs mere</a></p>
                             </div>
                             <div class="col-4 text-end">
-                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
+                                <button type="submit" class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></button>
                             </div>
                         </div>
                     </div>
