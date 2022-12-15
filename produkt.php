@@ -3,6 +3,28 @@ require "settings/init.php";
 
 $prodId = $_GET["prodId"];
 $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
+
+if (!empty($_POST["data"])){
+    $data = $_POST["data"];
+    $file = $_FILES;
+
+    if (!empty($file["prodBillede"]["tmp_name"])) {
+        move_uploaded_file($file["prodBillede"]["tmp_name"], "uploads/" . basename($file["prodBillede"]["name"]));
+    }
+
+    $sql = "INSERT INTO kurv (prodNavn, prodBillede, prodPris, prodAntal) VALUES(:prodNavn,:prodBillede, :prodPris, :prodAntal)";
+    $bind = [
+        ":prodBillede" => (!empty($file["prodBillede"]["tmp_name"])) ? $file["prodBillede"]["name"] : NULL,
+        ":prodNavn" => $data["prodNavn"],
+        ":prodPris" => $data["prodPris"],
+        ":prodAntal" => $data["prodAntal"]];
+
+    $db->sql($sql, $bind, false);
+
+    echo "Tilføjet til kurv. Gå tilbage";
+
+    exit;
+}
 ?>
 
 <?php foreach ($produkter as $produkt){ ?>
@@ -60,13 +82,13 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
                                 <p class="card-text"><?php echo $produkt->prodDato; ?></p>
                             </div>
                             <div class="col-6 text-end py-3 pe-4">
-                            <form action="index.php?page=cart" method="post">
-                                <input type="number" name="quantity" value="1" min="1" max="<?=$product['maengde']?>" placeholder="Mændge" required>
-                                <input type="hidden" name="product_id" value="<?=$product['id']?>">
-                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
-                            </form>
-
-<!--                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>-->
+                                <form action="produkt.php?prodId=<?php echo $_GET["prodId"]; ?>" method="post">
+                                    <input type="number" name="data[prodAntal]" value="1" min="1" placeholder="Mændge" required>
+                                    <input type="hidden" name="data[prodNavn]" value="<?php echo $produkt->prodNavn ?>">
+                                    <input type="hidden" name="data[prodBillede]" value="<?php echo $produkt->prodBillede ?>">
+                                    <input type="hidden" name="data[prodPris]" value="<?php echo $produkt->prodPris ?>">
+                                    <button class="btn btn-customSecondary rounded-circle" type="submit"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
