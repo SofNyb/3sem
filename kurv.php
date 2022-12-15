@@ -1,7 +1,8 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter");
+$produkter = $db->sql("SELECT * FROM kurv");
+
 ?>
 
 <!DOCTYPE html>
@@ -33,23 +34,29 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <?php include "includes/header.php"; ?>
 
-<section class="container mt-5 pt-5">
 
-    <div class="kurv">
-
-        <div class="genstande">
-            <!-- Her vises produkterne-->
-
-
+<div class="container kurv">
+    <div class="row pt-4 g-3">
+        <?php foreach ($produkter as $produkt){ ?>
+        <div class="col-lg-6 col-xxl-6">
+            <div class="card h-100">
+                <img class="card-img-top" style="height: 250px; width: 100%;" src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
+                <div class="card-body">
+                    <h4 class="card-title border-bottom pb-3"><?php echo $produkt->prodNavn; ?></h4>
+                    <div class="row">
+                        <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
+                        <p class="card-text mb-4"><?php echo $produkt->prodAntal; ?>stk.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <?php } ?>
     </div>
-
-</section>
+</div>
 
 <hr>
 
-<section class="container mt-5 mb-5">
+<section class="container mb-5">
 
     <div class="row justify-content-evenly">
 
@@ -80,8 +87,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
-
-    import Songs from "./js/produkt.js";
 
 </script>
 </body>
