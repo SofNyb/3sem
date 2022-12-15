@@ -18,7 +18,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 
         $db->sql($sql, $bind, false);
 
-        header("Location: #.php");
+        header("Location: tilfojet.php");
 
         exit;
     }
