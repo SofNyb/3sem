@@ -26,8 +26,8 @@
 
 <?php include "includes/header.php"; ?>
 
-<section class="container-lg my-5 pt-5">
-    <div class="row mt-0 mt-lg-5">
+<section class="container-lg mt-5 pt-5 py-lg-5">
+    <div class="animated fadeInLeft row mt-0 mt-lg-5">
 
         <div class="col-lg-6">
             <img class="aboutHero" src="images/kragebjerggaardHoestfest.png">
@@ -46,8 +46,10 @@
         </div>
 
     </div>
+</section>
 
-    <div class="row mt-0 mt-lg-5">
+<section class="container-lg py-lg-5">
+    <div class="animated fadeInRight row mt-0 mt-lg-5">
 
         <div class="mt-4 gx-5 gx-lg-4 mt-lg-0 col-lg-6">
             <h3>Vores gård</h3>
@@ -67,12 +69,20 @@
         </div>
 
         <div class="col-lg-6 d-none d-lg-block">
-            <img src="images/infografik.png">
+            <img class="aboutHero" src="images/kragebjerggaardAutentisk.png">
         </div>
 
     </div>
+</section>
 
-    <div class="row mt-0 mt-lg-5">
+<section class="container-lg py-lg-5">
+    <div class="animated fadeInTop mt-5">
+        <img src="images/infografik.png">
+    </div>
+</section>
+
+<section class="container-lg py-lg-5">
+    <div class="animated fadeInTop row mt-0 mt-lg-5">
 
         <div class="mt-4 gx-5 gx-lg-4 mt-lg-0">
             <h3>Find os</h3>
@@ -104,9 +114,9 @@
 
     </div>
 </section>
-
 <?php include "includes/footer.php"; ?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>
