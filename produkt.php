@@ -39,10 +39,10 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 
 <?php include "includes/header.php"; ?>
 
-<div class="container produkt mt-5">
-    <div class="row py-4 g-3 mt-5">
+<div class="container produkt">
+    <div class="row py-4 g-3">
             <div class="col-lg-6 col-xxl-6">
-                <div class="card">
+                <div class="card produktbillede">
                     <img src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
                 </div>
             </div>

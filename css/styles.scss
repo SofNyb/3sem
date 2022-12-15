@@ -67,6 +67,25 @@ footer {
 	min-height: 200px;
 }
 
+.produkt {
+	margin-top: 15%;
+}
+
+@media screen and (min-width: 992px){
+	.produkt {
+		margin-bottom: 10%;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	.produkt {
+		margin-bottom: 2%;
+	}
+}
+
+.produktbillede {
+	margin-top: 10%;
+}
 
 .indexProdImgAlt {
 	object-fit: cover;
