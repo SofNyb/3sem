@@ -8,20 +8,16 @@ if (!empty($_POST["data"])){
     $data = $_POST["data"];
     $file = $_FILES;
 
-    if (!empty($file["prodBillede"]["tmp_name"])) {
-        move_uploaded_file($file["prodBillede"]["tmp_name"], "uploads/" . basename($file["prodBillede"]["name"]));
-    }
-
     $sql = "INSERT INTO kurv (prodNavn, prodBillede, prodPris, prodAntal) VALUES(:prodNavn,:prodBillede, :prodPris, :prodAntal)";
     $bind = [
-        ":prodBillede" => (!empty($file["prodBillede"]["tmp_name"])) ? $file["prodBillede"]["name"] : NULL,
+        ":prodBillede" => $data["prodBillede"],
         ":prodNavn" => $data["prodNavn"],
         ":prodPris" => $data["prodPris"],
         ":prodAntal" => $data["prodAntal"]];
 
     $db->sql($sql, $bind, false);
 
-    echo "Tilføjet til kurv. Gå tilbage";
+    echo "Tilføjet til kurv. <a href='produkt.php?prodId=".$prodId."'>Gå tilbage</a>";
 
     exit;
 }

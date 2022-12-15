@@ -37,8 +37,10 @@ $produkter = $db->sql("SELECT * FROM kurv");
 
 <div class="container kurv">
     <div class="row pt-4 g-3">
-        <?php foreach ($produkter as $produkt){ ?>
-        <div class="col-lg-6 col-xxl-6">
+        <?php
+        $pris = 0;
+        foreach ($produkter as $produkt){ ?>
+        <div class="col-md-6 col-lg-6 col-xxl-6">
             <div class="card h-100">
                 <img class="card-img-top" style="height: 250px; width: 100%;" src="images/<?php echo $produkt->prodBillede; ?>" alt="<?php echo $produkt->prodNavn;?>">
                 <div class="card-body">
@@ -50,7 +52,9 @@ $produkter = $db->sql("SELECT * FROM kurv");
                 </div>
             </div>
         </div>
-        <?php } ?>
+        <?php
+        $pris += $produkt->prodPris * $produkt->prodAntal;
+        } ?>
     </div>
 </div>
 
@@ -64,7 +68,7 @@ $produkter = $db->sql("SELECT * FROM kurv");
 
             <div class="total">
                 <p class="fw-bold">
-                    I alt: <span class="text-decoration-underline fw-normal"><?php echo "DKK " . "[PRIS]";?></span>
+                    I alt: <span class="text-decoration-underline fw-normal"><?php echo $pris; ?>DKK</span>
                 </p>
             </div>
 
