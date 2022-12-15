@@ -58,17 +58,17 @@ $produkter = $db->sql("SELECT * FROM kurv");
     </div>
 </div>
 
-<hr>
+<hr class="mt-5">
 
-<section class="container mb-5">
+<section class="container my-5">
 
     <div class="row justify-content-evenly">
 
         <div class="col-auto">
 
             <div class="total">
-                <p class="fw-bold">
-                    I alt: <span class="text-decoration-underline fw-normal"><?php echo $pris; ?>DKK</span>
+                <p class="fw-bold p-2">
+                    <h4>I alt: <span class="text-decoration-underline fw-normal"><?php echo $pris; ?>DKK</span></h4>
                 </p>
             </div>
 
@@ -77,8 +77,8 @@ $produkter = $db->sql("SELECT * FROM kurv");
         <div class="col-auto">
 
             <div class="total">
-                <a class="text-decoration-underline" href="#">
-                    Gå til betaling
+                <a class="btn btn-customSecondary rounded-5 text-decoration-underline text-light p-3" href="#">
+                    <h5>Gå til betaling</h5>
                 </a>
             </div>
 
