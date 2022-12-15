@@ -1,8 +1,18 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM kurv");
 
+if(!empty ($_GET["type"])) {
+    if ($_GET["type"] == "slet") {
+        $id = $_GET["id"];
+        $db->sql("DELETE FROM kurv WHERE prodID = :prodId", [":prodId"=>$id], false);
+
+        header("Location: kurv.php");
+        exit;
+    }
+}
+
+$produkter = $db->sql("SELECT * FROM kurv");
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +58,9 @@ $produkter = $db->sql("SELECT * FROM kurv");
                     <div class="row">
                         <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
                         <p class="card-text mb-4"><?php echo $produkt->prodAntal; ?>stk.</p>
+                    </div>
+                    <div class="card-footer col-12 text-center p-3">
+                        <a class="text-dark ms-1" href="kurv.php?type=slet&id=<?php echo $produkt->prodId;?>">Slet</a>
                     </div>
                 </div>
             </div>
