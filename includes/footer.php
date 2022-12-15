@@ -18,12 +18,12 @@
         <div class="container mb-4">
             <div class="row mt-3 justify-content-center">
                 <div class="col-auto">
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/search/top?q=kragebjergg%C3%A5rd" target="_blank">
                         <i class="fa-brands text-white fa-facebook-f fa-3x"></i>
                     </a>
                 </div>
                 <div class="col-auto">
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/kragebjerggaard/?hl=da" target="_blank">
                         <i class="fa-brands text-white fa-instagram fa-3x"></i>
                     </a>
                 </div>
