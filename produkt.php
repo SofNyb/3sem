@@ -60,7 +60,13 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
                                 <p class="card-text"><?php echo $produkt->prodDato; ?></p>
                             </div>
                             <div class="col-6 text-end py-3 pe-4">
+                            <form action="index.php?page=cart" method="post">
+                                <input type="number" name="quantity" value="1" min="1" max="<?=$product['maengde']?>" placeholder="Mændge" required>
+                                <input type="hidden" name="product_id" value="<?=$product['id']?>">
                                 <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>
+                            </form>
+
+<!--                                <a class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></a>-->
                             </div>
                         </div>
                     </div>
