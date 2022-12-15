@@ -4,23 +4,26 @@ require "settings/init.php";
 $prodId = $_GET["prodId"];
 $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
 
-if (!empty($_POST["data"])){
-    $data = $_POST["data"];
-    $file = $_FILES;
 
-    $sql = "INSERT INTO kurv (prodNavn, prodBillede, prodPris, prodAntal) VALUES(:prodNavn,:prodBillede, :prodPris, :prodAntal)";
-    $bind = [
-        ":prodBillede" => $data["prodBillede"],
-        ":prodNavn" => $data["prodNavn"],
-        ":prodPris" => $data["prodPris"],
-        ":prodAntal" => $data["prodAntal"]];
+    if (!empty($_POST["data"])) {
+        $data = $_POST["data"];
+        $file = $_FILES;
 
-    $db->sql($sql, $bind, false);
+        $sql = "INSERT INTO kurv (prodNavn, prodBillede, prodPris, prodAntal) VALUES(:prodNavn,:prodBillede, :prodPris, :prodAntal)";
+        $bind = [
+            ":prodBillede" => $data["prodBillede"],
+            ":prodNavn" => $data["prodNavn"],
+            ":prodPris" => $data["prodPris"],
+            ":prodAntal" => $data["prodAntal"]];
 
-    echo "Tilføjet til kurv. <a href='produkt.php?prodId=".$prodId."'>Gå tilbage</a>";
+        $db->sql($sql, $bind, false);
 
-    exit;
-}
+        header("Location: #.php");
+
+        exit;
+    }
+
+
 ?>
 
 <?php foreach ($produkter as $produkt){ ?>
@@ -79,7 +82,7 @@ if (!empty($_POST["data"])){
                             </div>
                             <div class="col-6 text-end py-3 pe-4">
                                 <form action="produkt.php?prodId=<?php echo $_GET["prodId"]; ?>" method="post">
-                                    <input type="number" name="data[prodAntal]" value="1" min="1" placeholder="Mændge" required>
+                                    <input class="rounded-2 me-2" type="number" name="data[prodAntal]" value="1" min="1" placeholder="Mængde" required>
                                     <input type="hidden" name="data[prodNavn]" value="<?php echo $produkt->prodNavn ?>">
                                     <input type="hidden" name="data[prodBillede]" value="<?php echo $produkt->prodBillede ?>">
                                     <input type="hidden" name="data[prodPris]" value="<?php echo $produkt->prodPris ?>">
@@ -93,6 +96,8 @@ if (!empty($_POST["data"])){
         <?php } ?>
     </div>
 </div>
+
+
 
 <?php include "includes/footer.php"; ?>
 
