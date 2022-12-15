@@ -213,3 +213,41 @@ section.container-lg {
 		transform: translateY(0px);
 	}
 }
+
+// Sne animation
+@keyframes fall {
+	0% {
+	opacity: 0;
+	}
+	50% {
+	opacity: 1;
+	}
+	100% {
+	top: 100vh;
+	opacity: 1;
+	}
+}
+
+@keyframes sway {
+	0% {
+	margin-left: 0;
+	}
+	25% {
+	margin-left: 50px;
+	}
+	50% {
+	margin-left: -50px;
+	}
+	75% {
+	margin-left: 50px;
+	}
+	100% {
+	margin-left: 0;
+	}
+}
+
+.snow {
+	animation: fall ease-in infinite, sway ease-in-out infinite;
+	color: skyblue;
+	position: fixed;
+}

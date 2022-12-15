@@ -1,4 +1,4 @@
-const MutationObserver = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
             document.querySelectorAll(".animated")[0].classList.add("fadeInLeft");
@@ -9,4 +9,4 @@ const MutationObserver = new IntersectionObserver(entries => {
     })
 })
 
-MutationObserver.observe(document.querySelector(".container"));
+observer.observe(document.querySelector(".container"));
