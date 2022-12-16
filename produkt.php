@@ -72,8 +72,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
                     <div class="card-body">
                         <h4 class="card-title border-bottom pb-3"><?php echo $produkt->prodNavn; ?></h4>
                         <div class="row">
-                            <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?> <?php echo $produkt->prodMaengde; ?></h5>
-                            <p class="card-text mb-4"><?php echo $produkt->prodMaengde; ?></p>
+                            <h5 class="card-text mb-3"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?> <?php echo $produkt->prodMaengde; ?></h5>
                             <h3>Varebeskrivelse</h3>
                             <p class="card-title border-bottom pb-5"><?php echo $produkt->prodBeskrivelse; ?></p>
                             <div class="col-6 pt-2">
@@ -92,14 +91,11 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
                                         </button>
                                     </button>
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
+                                        <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tilføjet til Kurv</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fortsæt</button>
