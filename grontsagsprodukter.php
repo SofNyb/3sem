@@ -2,7 +2,28 @@
 require "settings/init.php";
 
 $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaengde FROM produkter WHERE prodType='Grøntsag'");
+
+    if (!empty($_POST["data"])) {
+        $data = $_POST["data"];
+        $file = $_FILES;
+
+        $sql = "INSERT INTO kurv (prodNavn, prodBillede, prodPris, prodAntal) VALUES(:prodNavn,:prodBillede, :prodPris, :prodAntal)";
+        $bind = [
+            ":prodBillede" => $data["prodBillede"],
+            ":prodNavn" => $data["prodNavn"],
+            ":prodPris" => $data["prodPris"],
+            ":prodAntal" => $data["prodAntal"]];
+
+        $db->sql($sql, $bind, false);
+
+        header("Location: grontsagsprodukter.php");
+
+        exit;
+    }
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="da">
@@ -49,11 +70,32 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaeng
                             <div class="col-12">
                                 <h5 class="card-text"><?php echo "Pris: " . number_format($produkt->prodPris, 2, ",", ".") . " kr."; ?></h5>
                             </div>
-                            <div class="col-8">
-                                <p class="mt-2"><a class="text-dark text-decoration-underline" href="produkt.php?prodId=<?php echo $produkt->prodId; ?>">Læs mere</a></p>
+                            <div class="col-6 mt-4">
+                                <p><a class="text-dark text-decoration-underline" href="produkt.php?prodId=<?php echo $produkt->prodId; ?>">Læs mere</a></p>
                             </div>
-                            <div class="col-4 text-end">
-                                <button type="submit" class="btn btn-customSecondary rounded-circle" href="#"><i class="fa-sharp text-light fa-solid fa-basket-shopping"></i></button>
+                            <div class="col-6 text-end mt-3">
+                                <form action="grontsagsprodukter.php?prodId=<?php echo $_GET["prodId"]; ?>" method="post">
+                                    <input class="rounded-2" style="width: 50px;" type="number" name="data[prodAntal]" value="1" min="1" placeholder="Mængde" required>
+                                    <input type="hidden" name="data[prodNavn]" value="<?php echo $produkt->prodNavn ?>">
+                                    <input type="hidden" name="data[prodBillede]" value="<?php echo $produkt->prodBillede ?>">
+                                    <input type="hidden" name="data[prodPris]" value="<?php echo $produkt->prodPris ?>">
+                                    <button type="button" class="btn btn-customSecondary rounded-circle" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        <i class="fa-sharp text-light fa-solid fa-basket-shopping"></i>
+                                    </button>
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Produkt tilføjet til kurv</h1>
+                                                    <button type="submit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn text-light btn-customSecondary" data-bs-dismiss="modal"><h5>Fortsæt</h5></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
