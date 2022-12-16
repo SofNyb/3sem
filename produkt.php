@@ -81,7 +81,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodId=$prodId");
                             </div>
                             <div class="col-6 text-end py-3 pe-4">
                                 <form action="produkt.php?prodId=<?php echo $_GET["prodId"]; ?>" method="post">
-                                    <input class="rounded-2 me-2" type="number" name="data[prodAntal]" value="1" min="1" placeholder="Mængde" required>
+                                    <input class="rounded-2 me-2" style="width: 80px;" type="number" name="data[prodAntal]" value="1" min="1" placeholder="Mængde" required>
                                     <input type="hidden" name="data[prodNavn]" value="<?php echo $produkt->prodNavn ?>">
                                     <input type="hidden" name="data[prodBillede]" value="<?php echo $produkt->prodBillede ?>">
                                     <input type="hidden" name="data[prodPris]" value="<?php echo $produkt->prodPris ?>">
