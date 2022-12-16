@@ -47,6 +47,9 @@ $produkter = $db->sql("SELECT prodId, prodNavn, prodBillede, prodPris, prodMaeng
 
     <script src="https://kit.fontawesome.com/bc87d7ac19.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tiny.cloud/1/xssvlu2s8qf9xc5tsggguxuegtb0t783k713q8tpsbc1x6sh/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <?php include "includes/meta_og.php" ?>
+
 </head>
 
 <body>
