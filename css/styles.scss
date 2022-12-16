@@ -251,3 +251,14 @@ section.container-lg {
 	color: skyblue;
 	position: fixed;
 }
+
+.fejl {
+	margin-top: 200px;
+	margin-bottom: 50px;
+}
+
+@media screen and (max-width: 992px){
+	.fejl {
+		margin-bottom: 200px;
+	}
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Kragebjerggård</title>
+    <title>Kragebjerggård - fejl</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -24,8 +24,9 @@
 
 <body>
 
-<section class="container">
+<?php include "includes/header.php"; ?>
 
+<section class="container fejl">
     <div class="my-5">
         <img src="images/Kragebjerggård404.png">
     </div>
@@ -37,6 +38,8 @@
     </div>
 
 </section>
+
+<?php include "includes/footer.php"; ?>
 
 </body>
 </html>
